@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {data} from './data'; // Local data file containing scheme information
 import './Schemes.css'
+import ipm from './ipm.jpg'
 
 const SchemesInfo = () => {
   return (
@@ -11,7 +12,7 @@ const SchemesInfo = () => {
       <ul className="sc">
         {data.map((scheme) => (
           <li key={scheme.id}>
-            <Link to={`/scheme-info/${scheme.id}`}>{scheme.name}</Link>
+            <Link to={`/scheme-info/${scheme.id}`} className='scheme-link'>{scheme.name}</Link>
           </li>
         ))}
       </ul>
@@ -19,7 +20,7 @@ const SchemesInfo = () => {
     </td>
     <td>
         <div className = "image">
-          <img src =  "ipm.jpg" alt = "My image" width="500" height = "400" />
+          <img src ={ipm} alt = "My image" width="500" height = "400" />
         </div>
     </td>
 </tr>

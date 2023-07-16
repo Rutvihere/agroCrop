@@ -1,5 +1,3 @@
-
-
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -15,7 +13,6 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { NavLink, useLocation } from 'react-router-dom';
 import NavLinkList from "./NavLinkList.jsx";
-
 
 
 const pages = NavLinkList
@@ -38,11 +35,11 @@ function ResponsiveAppBar() {
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
     };
-
     const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
+        localStorage.clear()
+        window.location.replace('/')
     };
-
+    
     return (
         <AppBar position="static" sx={{ bgcolor: '#2a9d8f' }}>
             <Container maxWidth="xl">
@@ -134,7 +131,7 @@ function ResponsiveAppBar() {
                         <Tooltip title="Open settings">
                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                                 {/* eslint-disable-next-line react/no-children-prop */}
-                                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" children={'V'} />
+                                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" children={'X'} />
                             </IconButton>
                         </Tooltip>
                         <Menu

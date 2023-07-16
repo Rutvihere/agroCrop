@@ -3,7 +3,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
-
 }
 
 h1 {
@@ -49,4 +48,11 @@ a::after{
     color: black;
     margin-left: 32%;
     margin-right: 32%;
+}
+
+.p{
+    color: browm;
+}
+.scheme-link{
+    text-decoration: none;
 }
